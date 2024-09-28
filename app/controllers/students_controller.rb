@@ -36,7 +36,7 @@ class StudentsController < ApplicationController
 
     if @student.valid?
       @student.save
-      redirect_to("/students/#{@student.id}", { :notice => "Student updated successfully."} )
+      redirect_to("/students/#{@student.id}", { :notice => "Student updated successfully." })
     else
       redirect_to("/students/#{@student.id}", { :alert => "Student failed to update successfully." })
     end
@@ -48,6 +48,6 @@ class StudentsController < ApplicationController
 
     @student.destroy
 
-    redirect_to("/students", { :notice => "Student deleted successfully."} )
+    redirect_to("/students", { :notice => "Student deleted successfully."})
   end
 end
